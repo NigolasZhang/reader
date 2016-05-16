@@ -92,7 +92,6 @@
 		FE8530DD1CE98B2000947474 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8530D71CE98B2000947474 /* FMResultSet.m */; };
 		FE8530DE1CE98B2000947474 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FE8530D81CE98B2000947474 /* Info.plist */; };
 		FE8530E01CE9926C00947474 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FE8530DF1CE9926B00947474 /* libsqlite3.tbd */; };
-		FE8530E21CE9935300947474 /* c09.db in Resources */ = {isa = PBXBuildFile; fileRef = FE8530E11CE9935300947474 /* c09.db */; };
 		FE8530E51CE9ABCB00947474 /* Timer.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8530E41CE9ABCB00947474 /* Timer.m */; };
 /* End PBXBuildFile section */
 
@@ -114,6 +113,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CBB244F21CE9F60B00173D81 /* c09.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = c09.db; sourceTree = "<group>"; };
 		FE852FCB1CE9838C00947474 /* Hanzi_1.1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hanzi_1.1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE852FCF1CE9838C00947474 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FE852FD11CE9838C00947474 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -267,7 +267,6 @@
 		FE8530D71CE98B2000947474 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		FE8530D81CE98B2000947474 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE8530DF1CE9926B00947474 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		FE8530E11CE9935300947474 /* c09.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = c09.db; path = Hanzi_1.1/c09.db; sourceTree = "<group>"; };
 		FE8530E31CE9ABCB00947474 /* Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timer.h; sourceTree = "<group>"; };
 		FE8530E41CE9ABCB00947474 /* Timer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Timer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -301,7 +300,7 @@
 		FE852FC21CE9838C00947474 = {
 			isa = PBXGroup;
 			children = (
-				FE8530E11CE9935300947474 /* c09.db */,
+				CBB244F21CE9F60B00173D81 /* c09.db */,
 				FE8530DF1CE9926B00947474 /* libsqlite3.tbd */,
 				FE852FCD1CE9838C00947474 /* Hanzi_1.1 */,
 				FE852FE71CE9838C00947474 /* Hanzi_1.1Tests */,
@@ -702,7 +701,6 @@
 				FE8530A21CE984C400947474 /* Sched.log in Resources */,
 				FE85308C1CE984C400947474 /* Decks.log in Resources */,
 				FE852FD91CE9838C00947474 /* Main.storyboard in Resources */,
-				FE8530E21CE9935300947474 /* c09.db in Resources */,
 				FE8530A61CE984C400947474 /* Stats.log in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
