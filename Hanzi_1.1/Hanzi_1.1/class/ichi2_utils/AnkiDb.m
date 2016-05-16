@@ -86,7 +86,10 @@
     //            mDatabase = null;
     //        }
     
-    
+    if (!self.mDatabase) {
+        [self.mDatabase close];
+#warning 下边看不懂
+    }
 }
 //
 //
@@ -118,7 +121,7 @@
 {
     //        mMod = mod;
     
-    
+    _mMod = mod;
 }
 //
 //
@@ -127,7 +130,7 @@
 {
     //        return mMod;
     
-    return nil;
+    return self.mMod;
     
 }
 //
@@ -156,6 +159,7 @@
     //        }
     //        return scalar;
     
+#warning 不知道怎办
     return nil;
     
 }
@@ -258,21 +262,21 @@
 //    private static String getCursorMethodName(String typeName) {
 + (NSString *)getCursorMethodNameWithtypeName:(NSString *)typeName
 {
-    //        if (typeName.equals("String")) {
-    //            return "getString";
-    //        } else if (typeName.equals("Long")) {
-    //            return "getLong";
-    //        } else if (typeName.equals("Integer")) {
-    //            return "getInt";
-    //        } else if (typeName.equals("Float")) {
-    //            return "getFloat";
-    //        } else if (typeName.equals("Double")) {
-    //            return "getDouble";
-    //        } else {
-    //            return null;
-    //        }
+            if ([typeName isEqualToString:@"String"]) {
+                return @"getString";
+            } else if ([typeName isEqualToString:@"Long"]) {
+                return @"getLong";
+            } else if ([typeName isEqualToString:@"Integer"]) {
+                return @"getInt";
+            } else if ([typeName isEqualToString:@"Float"]) {
+                return @"getFloat";
+            } else if ([typeName isEqualToString:@"Double"]) {
+                return @"getDouble";
+            } else {
+                return nil;
+            }
     
-    return nil;
+    
     
 }
 //
@@ -282,7 +286,7 @@
 {
     //        execute(sql, null);
     
-    
+    [self executeWithsql:sql object:nil];
 }
 //
 //
@@ -321,7 +325,12 @@
     //            mDatabase.execSQL(query);
     //        }
     
-    
+    self.mMod = YES;
+    NSArray *queries ;
+#warning sql.split(";") 该怎么写
+    for (NSString *query in queries) {
+#warning mDatabase.execSQL(query); 该怎么写
+    }
 }
 //
 //
@@ -331,7 +340,7 @@
 {
     //        return update(table, values, null, null);
     
-    return nil;
+    return [self updateWithtable:table values:values whereClause:nil whereArgs:nil];
     
 }
 //
@@ -342,9 +351,10 @@
 {
     //        mMod = true;
     //        return getDatabase().update(table, values, whereClause, whereArgs);
+    self.mMod = YES;
     
+#warning 怎么写
     return nil;
-    
 }
 //
 //
@@ -373,7 +383,8 @@
     //        } finally {
     //            mDatabase.endTransaction();
     //        }
-    
+    self.mMod = YES;
+#warning 怎么写
     
 }
 //

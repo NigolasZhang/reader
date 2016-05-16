@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB324BD61CE9FDA6007E5B91 /* NSJSONSerialization+hanzi.m in Sources */ = {isa = PBXBuildFile; fileRef = CB324BD51CE9FDA6007E5B91 /* NSJSONSerialization+hanzi.m */; };
+		CB324BD91CEA038A007E5B91 /* c09.db in Resources */ = {isa = PBXBuildFile; fileRef = CB324BD81CEA038A007E5B91 /* c09.db */; };
 		FE852FD01CE9838C00947474 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FE852FCF1CE9838C00947474 /* main.m */; };
 		FE852FD31CE9838C00947474 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FE852FD21CE9838C00947474 /* AppDelegate.m */; };
 		FE852FD61CE9838C00947474 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE852FD51CE9838C00947474 /* ViewController.m */; };
@@ -113,7 +115,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CBB244F21CE9F60B00173D81 /* c09.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = c09.db; sourceTree = "<group>"; };
+		CB324BD41CE9FDA6007E5B91 /* NSJSONSerialization+hanzi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSJSONSerialization+hanzi.h"; sourceTree = "<group>"; };
+		CB324BD51CE9FDA6007E5B91 /* NSJSONSerialization+hanzi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSJSONSerialization+hanzi.m"; sourceTree = "<group>"; };
+		CB324BD81CEA038A007E5B91 /* c09.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = c09.db; sourceTree = "<group>"; };
 		FE852FCB1CE9838C00947474 /* Hanzi_1.1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hanzi_1.1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE852FCF1CE9838C00947474 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FE852FD11CE9838C00947474 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -300,7 +304,7 @@
 		FE852FC21CE9838C00947474 = {
 			isa = PBXGroup;
 			children = (
-				CBB244F21CE9F60B00173D81 /* c09.db */,
+				CB324BD81CEA038A007E5B91 /* c09.db */,
 				FE8530DF1CE9926B00947474 /* libsqlite3.tbd */,
 				FE852FCD1CE9838C00947474 /* Hanzi_1.1 */,
 				FE852FE71CE9838C00947474 /* Hanzi_1.1Tests */,
@@ -328,6 +332,8 @@
 				FE852FD21CE9838C00947474 /* AppDelegate.m */,
 				FE852FD41CE9838C00947474 /* ViewController.h */,
 				FE852FD51CE9838C00947474 /* ViewController.m */,
+				CB324BD41CE9FDA6007E5B91 /* NSJSONSerialization+hanzi.h */,
+				CB324BD51CE9FDA6007E5B91 /* NSJSONSerialization+hanzi.m */,
 				FE852FD71CE9838C00947474 /* Main.storyboard */,
 				FE852FDA1CE9838C00947474 /* Assets.xcassets */,
 				FE852FDC1CE9838C00947474 /* LaunchScreen.storyboard */,
@@ -701,6 +707,7 @@
 				FE8530A21CE984C400947474 /* Sched.log in Resources */,
 				FE85308C1CE984C400947474 /* Decks.log in Resources */,
 				FE852FD91CE9838C00947474 /* Main.storyboard in Resources */,
+				CB324BD91CEA038A007E5B91 /* c09.db in Resources */,
 				FE8530A61CE984C400947474 /* Stats.log in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -778,6 +785,7 @@
 				FE852FD01CE9838C00947474 /* main.m in Sources */,
 				FE8530981CE984C400947474 /* Leech.m in Sources */,
 				FE8530871CE984C400947474 /* Card.m in Sources */,
+				CB324BD61CE9FDA6007E5B91 /* NSJSONSerialization+hanzi.m in Sources */,
 				FE8530C91CE984C400947474 /* Threads.m in Sources */,
 				FE8530C11CE984C400947474 /* BitmapUtil.m in Sources */,
 				FE8530A11CE984C400947474 /* Note.m in Sources */,
