@@ -1,0 +1,1042 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FE852FD01CE9838C00947474 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FE852FCF1CE9838C00947474 /* main.m */; };
+		FE852FD31CE9838C00947474 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FE852FD21CE9838C00947474 /* AppDelegate.m */; };
+		FE852FD61CE9838C00947474 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE852FD51CE9838C00947474 /* ViewController.m */; };
+		FE852FD91CE9838C00947474 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE852FD71CE9838C00947474 /* Main.storyboard */; };
+		FE852FDB1CE9838C00947474 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE852FDA1CE9838C00947474 /* Assets.xcassets */; };
+		FE852FDE1CE9838C00947474 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE852FDC1CE9838C00947474 /* LaunchScreen.storyboard */; };
+		FE852FE91CE9838C00947474 /* Hanzi_1_1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = FE852FE81CE9838C00947474 /* Hanzi_1_1Tests.m */; };
+		FE852FF41CE9838C00947474 /* Hanzi_1_1UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FE852FF31CE9838C00947474 /* Hanzi_1_1UITests.m */; };
+		FE8530861CE984C400947474 /* Card.log in Resources */ = {isa = PBXBuildFile; fileRef = FE8530041CE984C400947474 /* Card.log */; };
+		FE8530871CE984C400947474 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8530051CE984C400947474 /* Card.m */; };
+		FE8530881CE984C400947474 /* CardStats.log in Resources */ = {isa = PBXBuildFile; fileRef = FE8530071CE984C400947474 /* CardStats.log */; };
+		FE8530891CE984C400947474 /* CardStats.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8530081CE984C400947474 /* CardStats.m */; };
+		FE85308A1CE984C400947474 /* Consts.log in Resources */ = {isa = PBXBuildFile; fileRef = FE85300A1CE984C400947474 /* Consts.log */; };
+		FE85308B1CE984C400947474 /* Consts.m in Sources */ = {isa = PBXBuildFile; fileRef = FE85300B1CE984C400947474 /* Consts.m */; };
+		FE85308C1CE984C400947474 /* Decks.log in Resources */ = {isa = PBXBuildFile; fileRef = FE85300D1CE984C400947474 /* Decks.log */; };
+		FE85308D1CE984C400947474 /* Decks.m in Sources */ = {isa = PBXBuildFile; fileRef = FE85300E1CE984C400947474 /* Decks.m */; };
+		FE85308E1CE984C400947474 /* Finder.log in Resources */ = {isa = PBXBuildFile; fileRef = FE8530101CE984C400947474 /* Finder.log */; };
+		FE85308F1CE984C400947474 /* Finder.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8530111CE984C400947474 /* Finder.m */; };
+		FE8530901CE984C400947474 /* ChessFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8530141CE984C400947474 /* ChessFilter.m */; };
+		FE8530911CE984C400947474 /* ExternalHookLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8530161CE984C400947474 /* ExternalHookLoader.m */; };
+		FE8530921CE984C400947474 /* FuriganaFilters.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8530181CE984C400947474 /* FuriganaFilters.m */; };
+		FE8530931CE984C400947474 /* HebrewFixFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = FE85301A1CE984C400947474 /* HebrewFixFilter.m */; };
+		FE8530941CE984C400947474 /* HintFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = FE85301C1CE984C400947474 /* HintFilter.m */; };
+		FE8530951CE984C400947474 /* Hook.m in Sources */ = {isa = PBXBuildFile; fileRef = FE85301E1CE984C400947474 /* Hook.m */; };
+		FE8530961CE984C400947474 /* HookPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8530201CE984C400947474 /* HookPlugin.m */; };
+		FE8530971CE984C400947474 /* Hooks.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8530221CE984C400947474 /* Hooks.m */; };
+		FE8530981CE984C400947474 /* Leech.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8530241CE984C400947474 /* Leech.m */; };
+		FE8530991CE984C400947474 /* Anki2Importer.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8530271CE984C400947474 /* Anki2Importer.m */; };
+		FE85309A1CE984C400947474 /* LaTeX.log in Resources */ = {isa = PBXBuildFile; fileRef = FE8530291CE984C400947474 /* LaTeX.log */; };
+		FE85309B1CE984C400947474 /* LaTeX.m in Sources */ = {isa = PBXBuildFile; fileRef = FE85302A1CE984C400947474 /* LaTeX.m */; };
+		FE85309C1CE984C400947474 /* Media.log in Resources */ = {isa = PBXBuildFile; fileRef = FE85302C1CE984C400947474 /* Media.log */; };
+		FE85309D1CE984C400947474 /* Media.m in Sources */ = {isa = PBXBuildFile; fileRef = FE85302D1CE984C400947474 /* Media.m */; };
+		FE85309E1CE984C400947474 /* Models.log in Resources */ = {isa = PBXBuildFile; fileRef = FE85302F1CE984C400947474 /* Models.log */; };
+		FE85309F1CE984C400947474 /* Models.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8530301CE984C400947474 /* Models.m */; };
+		FE8530A01CE984C400947474 /* Note.log in Resources */ = {isa = PBXBuildFile; fileRef = FE8530321CE984C400947474 /* Note.log */; };
+		FE8530A11CE984C400947474 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8530331CE984C400947474 /* Note.m */; };
+		FE8530A21CE984C400947474 /* Sched.log in Resources */ = {isa = PBXBuildFile; fileRef = FE8530351CE984C400947474 /* Sched.log */; };
+		FE8530A31CE984C400947474 /* Sched.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8530361CE984C400947474 /* Sched.m */; };
+		FE8530A41CE984C400947474 /* Sound.log in Resources */ = {isa = PBXBuildFile; fileRef = FE8530381CE984C400947474 /* Sound.log */; };
+		FE8530A51CE984C400947474 /* Sound.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8530391CE984C400947474 /* Sound.m */; };
+		FE8530A61CE984C400947474 /* Stats.log in Resources */ = {isa = PBXBuildFile; fileRef = FE85303B1CE984C400947474 /* Stats.log */; };
+		FE8530A71CE984C400947474 /* Stats.m in Sources */ = {isa = PBXBuildFile; fileRef = FE85303C1CE984C400947474 /* Stats.m */; };
+		FE8530A81CE984C400947474 /* Storage.log in Resources */ = {isa = PBXBuildFile; fileRef = FE85303E1CE984C400947474 /* Storage.log */; };
+		FE8530A91CE984C400947474 /* Storage.m in Sources */ = {isa = PBXBuildFile; fileRef = FE85303F1CE984C400947474 /* Storage.m */; };
+		FE8530AA1CE984C400947474 /* FullSyncer.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8530421CE984C400947474 /* FullSyncer.m */; };
+		FE8530AB1CE984C400947474 /* HttpSyncer.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8530441CE984C400947474 /* HttpSyncer.m */; };
+		FE8530AC1CE984C400947474 /* MediaSyncer.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8530461CE984C400947474 /* MediaSyncer.m */; };
+		FE8530AD1CE984C400947474 /* RemoteMediaServer.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8530481CE984C400947474 /* RemoteMediaServer.m */; };
+		FE8530AE1CE984C400947474 /* RemoteServer.m in Sources */ = {isa = PBXBuildFile; fileRef = FE85304A1CE984C400947474 /* RemoteServer.m */; };
+		FE8530AF1CE984C400947474 /* Syncer.m in Sources */ = {isa = PBXBuildFile; fileRef = FE85304C1CE984C400947474 /* Syncer.m */; };
+		FE8530B01CE984C400947474 /* Tags.log in Resources */ = {isa = PBXBuildFile; fileRef = FE85304E1CE984C400947474 /* Tags.log */; };
+		FE8530B11CE984C400947474 /* Tags.m in Sources */ = {isa = PBXBuildFile; fileRef = FE85304F1CE984C400947474 /* Tags.m */; };
+		FE8530B21CE984C400947474 /* Template.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8530521CE984C400947474 /* Template.m */; };
+		FE8530B31CE984C400947474 /* Utils.log in Resources */ = {isa = PBXBuildFile; fileRef = FE8530541CE984C400947474 /* Utils.log */; };
+		FE8530B41CE984C400947474 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8530551CE984C400947474 /* Utils.m */; };
+		FE8530B51CE984C400947474 /* XCollection.log in Resources */ = {isa = PBXBuildFile; fileRef = FE8530571CE984C400947474 /* XCollection.log */; };
+		FE8530B61CE984C400947474 /* XCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8530581CE984C400947474 /* XCollection.m */; };
+		FE8530B71CE984C400947474 /* Context.m in Sources */ = {isa = PBXBuildFile; fileRef = FE85305B1CE984C400947474 /* Context.m */; };
+		FE8530B81CE984C400947474 /* NSMutableDictionary+hanzi.m in Sources */ = {isa = PBXBuildFile; fileRef = FE85305D1CE984C400947474 /* NSMutableDictionary+hanzi.m */; };
+		FE8530B91CE984C400947474 /* AnkiDatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8530601CE984C400947474 /* AnkiDatabaseManager.m */; };
+		FE8530BA1CE984C400947474 /* AnkiDb.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8530621CE984C400947474 /* AnkiDb.m */; };
+		FE8530BB1CE984C400947474 /* AnkiDroidApp.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8530641CE984C400947474 /* AnkiDroidApp.m */; };
+		FE8530BC1CE984C400947474 /* AnkiExporter.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8530671CE984C400947474 /* AnkiExporter.m */; };
+		FE8530BD1CE984C400947474 /* AnkiPackageExporter.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8530691CE984C400947474 /* AnkiPackageExporter.m */; };
+		FE8530BE1CE984C400947474 /* Exporter.m in Sources */ = {isa = PBXBuildFile; fileRef = FE85306B1CE984C400947474 /* Exporter.m */; };
+		FE8530BF1CE984C400947474 /* ZipFile.m in Sources */ = {isa = PBXBuildFile; fileRef = FE85306D1CE984C400947474 /* ZipFile.m */; };
+		FE8530C01CE984C400947474 /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = FE85306F1CE984C400947474 /* Base64.m */; };
+		FE8530C11CE984C400947474 /* BitmapUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8530711CE984C400947474 /* BitmapUtil.m */; };
+		FE8530C21CE984C400947474 /* ConvUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8530731CE984C400947474 /* ConvUtils.m */; };
+		FE8530C31CE984C400947474 /* DiffEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8530751CE984C400947474 /* DiffEngine.m */; };
+		FE8530C41CE984C400947474 /* ExifUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8530771CE984C400947474 /* ExifUtil.m */; };
+		FE8530C51CE984C400947474 /* HtmlUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8530791CE984C400947474 /* HtmlUtil.m */; };
+		FE8530C61CE984C400947474 /* HttpUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = FE85307B1CE984C400947474 /* HttpUtility.m */; };
+		FE8530C71CE984C400947474 /* LanguageUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FE85307D1CE984C400947474 /* LanguageUtil.m */; };
+		FE8530C81CE984C400947474 /* MethodLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = FE85307F1CE984C400947474 /* MethodLogger.m */; };
+		FE8530C91CE984C400947474 /* Threads.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8530811CE984C400947474 /* Threads.m */; };
+		FE8530CA1CE984C400947474 /* UIUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8530831CE984C400947474 /* UIUtils.m */; };
+		FE8530CB1CE984C400947474 /* VersionUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8530851CE984C400947474 /* VersionUtils.m */; };
+		FE8530D91CE98B2000947474 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8530CE1CE98B2000947474 /* FMDatabase.m */; };
+		FE8530DA1CE98B2000947474 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8530D01CE98B2000947474 /* FMDatabaseAdditions.m */; };
+		FE8530DB1CE98B2000947474 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8530D21CE98B2000947474 /* FMDatabasePool.m */; };
+		FE8530DC1CE98B2000947474 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8530D41CE98B2000947474 /* FMDatabaseQueue.m */; };
+		FE8530DD1CE98B2000947474 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8530D71CE98B2000947474 /* FMResultSet.m */; };
+		FE8530DE1CE98B2000947474 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FE8530D81CE98B2000947474 /* Info.plist */; };
+		FE8530E01CE9926C00947474 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FE8530DF1CE9926B00947474 /* libsqlite3.tbd */; };
+		FE8530E21CE9935300947474 /* c09.db in Resources */ = {isa = PBXBuildFile; fileRef = FE8530E11CE9935300947474 /* c09.db */; };
+		FE8530E51CE9ABCB00947474 /* Timer.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8530E41CE9ABCB00947474 /* Timer.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FE852FE51CE9838C00947474 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE852FC31CE9838C00947474 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FE852FCA1CE9838C00947474;
+			remoteInfo = Hanzi_1.1;
+		};
+		FE852FF01CE9838C00947474 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE852FC31CE9838C00947474 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FE852FCA1CE9838C00947474;
+			remoteInfo = Hanzi_1.1;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FE852FCB1CE9838C00947474 /* Hanzi_1.1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hanzi_1.1.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE852FCF1CE9838C00947474 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FE852FD11CE9838C00947474 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FE852FD21CE9838C00947474 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FE852FD41CE9838C00947474 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FE852FD51CE9838C00947474 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FE852FD81CE9838C00947474 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FE852FDA1CE9838C00947474 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FE852FDD1CE9838C00947474 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FE852FDF1CE9838C00947474 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE852FE41CE9838C00947474 /* Hanzi_1.1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Hanzi_1.1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE852FE81CE9838C00947474 /* Hanzi_1_1Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Hanzi_1_1Tests.m; sourceTree = "<group>"; };
+		FE852FEA1CE9838C00947474 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE852FEF1CE9838C00947474 /* Hanzi_1.1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Hanzi_1.1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE852FF31CE9838C00947474 /* Hanzi_1_1UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Hanzi_1_1UITests.m; sourceTree = "<group>"; };
+		FE852FF51CE9838C00947474 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE8530031CE984C400947474 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
+		FE8530041CE984C400947474 /* Card.log */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Card.log; sourceTree = "<group>"; };
+		FE8530051CE984C400947474 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
+		FE8530061CE984C400947474 /* CardStats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardStats.h; sourceTree = "<group>"; };
+		FE8530071CE984C400947474 /* CardStats.log */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CardStats.log; sourceTree = "<group>"; };
+		FE8530081CE984C400947474 /* CardStats.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardStats.m; sourceTree = "<group>"; };
+		FE8530091CE984C400947474 /* Consts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Consts.h; sourceTree = "<group>"; };
+		FE85300A1CE984C400947474 /* Consts.log */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Consts.log; sourceTree = "<group>"; };
+		FE85300B1CE984C400947474 /* Consts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Consts.m; sourceTree = "<group>"; };
+		FE85300C1CE984C400947474 /* Decks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Decks.h; sourceTree = "<group>"; };
+		FE85300D1CE984C400947474 /* Decks.log */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Decks.log; sourceTree = "<group>"; };
+		FE85300E1CE984C400947474 /* Decks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Decks.m; sourceTree = "<group>"; };
+		FE85300F1CE984C400947474 /* Finder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finder.h; sourceTree = "<group>"; };
+		FE8530101CE984C400947474 /* Finder.log */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Finder.log; sourceTree = "<group>"; };
+		FE8530111CE984C400947474 /* Finder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finder.m; sourceTree = "<group>"; };
+		FE8530131CE984C400947474 /* ChessFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChessFilter.h; sourceTree = "<group>"; };
+		FE8530141CE984C400947474 /* ChessFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChessFilter.m; sourceTree = "<group>"; };
+		FE8530151CE984C400947474 /* ExternalHookLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExternalHookLoader.h; sourceTree = "<group>"; };
+		FE8530161CE984C400947474 /* ExternalHookLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExternalHookLoader.m; sourceTree = "<group>"; };
+		FE8530171CE984C400947474 /* FuriganaFilters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FuriganaFilters.h; sourceTree = "<group>"; };
+		FE8530181CE984C400947474 /* FuriganaFilters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FuriganaFilters.m; sourceTree = "<group>"; };
+		FE8530191CE984C400947474 /* HebrewFixFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HebrewFixFilter.h; sourceTree = "<group>"; };
+		FE85301A1CE984C400947474 /* HebrewFixFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HebrewFixFilter.m; sourceTree = "<group>"; };
+		FE85301B1CE984C400947474 /* HintFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HintFilter.h; sourceTree = "<group>"; };
+		FE85301C1CE984C400947474 /* HintFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HintFilter.m; sourceTree = "<group>"; };
+		FE85301D1CE984C400947474 /* Hook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hook.h; sourceTree = "<group>"; };
+		FE85301E1CE984C400947474 /* Hook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hook.m; sourceTree = "<group>"; };
+		FE85301F1CE984C400947474 /* HookPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HookPlugin.h; sourceTree = "<group>"; };
+		FE8530201CE984C400947474 /* HookPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HookPlugin.m; sourceTree = "<group>"; };
+		FE8530211CE984C400947474 /* Hooks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hooks.h; sourceTree = "<group>"; };
+		FE8530221CE984C400947474 /* Hooks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hooks.m; sourceTree = "<group>"; };
+		FE8530231CE984C400947474 /* Leech.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Leech.h; sourceTree = "<group>"; };
+		FE8530241CE984C400947474 /* Leech.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Leech.m; sourceTree = "<group>"; };
+		FE8530261CE984C400947474 /* Anki2Importer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Anki2Importer.h; sourceTree = "<group>"; };
+		FE8530271CE984C400947474 /* Anki2Importer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Anki2Importer.m; sourceTree = "<group>"; };
+		FE8530281CE984C400947474 /* LaTeX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaTeX.h; sourceTree = "<group>"; };
+		FE8530291CE984C400947474 /* LaTeX.log */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LaTeX.log; sourceTree = "<group>"; };
+		FE85302A1CE984C400947474 /* LaTeX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaTeX.m; sourceTree = "<group>"; };
+		FE85302B1CE984C400947474 /* Media.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Media.h; sourceTree = "<group>"; };
+		FE85302C1CE984C400947474 /* Media.log */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Media.log; sourceTree = "<group>"; };
+		FE85302D1CE984C400947474 /* Media.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Media.m; sourceTree = "<group>"; };
+		FE85302E1CE984C400947474 /* Models.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Models.h; sourceTree = "<group>"; };
+		FE85302F1CE984C400947474 /* Models.log */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Models.log; sourceTree = "<group>"; };
+		FE8530301CE984C400947474 /* Models.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Models.m; sourceTree = "<group>"; };
+		FE8530311CE984C400947474 /* Note.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Note.h; sourceTree = "<group>"; };
+		FE8530321CE984C400947474 /* Note.log */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Note.log; sourceTree = "<group>"; };
+		FE8530331CE984C400947474 /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; };
+		FE8530341CE984C400947474 /* Sched.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sched.h; sourceTree = "<group>"; };
+		FE8530351CE984C400947474 /* Sched.log */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Sched.log; sourceTree = "<group>"; };
+		FE8530361CE984C400947474 /* Sched.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sched.m; sourceTree = "<group>"; };
+		FE8530371CE984C400947474 /* Sound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sound.h; sourceTree = "<group>"; };
+		FE8530381CE984C400947474 /* Sound.log */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Sound.log; sourceTree = "<group>"; };
+		FE8530391CE984C400947474 /* Sound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sound.m; sourceTree = "<group>"; };
+		FE85303A1CE984C400947474 /* Stats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stats.h; sourceTree = "<group>"; };
+		FE85303B1CE984C400947474 /* Stats.log */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Stats.log; sourceTree = "<group>"; };
+		FE85303C1CE984C400947474 /* Stats.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stats.m; sourceTree = "<group>"; };
+		FE85303D1CE984C400947474 /* Storage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Storage.h; sourceTree = "<group>"; };
+		FE85303E1CE984C400947474 /* Storage.log */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Storage.log; sourceTree = "<group>"; };
+		FE85303F1CE984C400947474 /* Storage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Storage.m; sourceTree = "<group>"; };
+		FE8530411CE984C400947474 /* FullSyncer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullSyncer.h; sourceTree = "<group>"; };
+		FE8530421CE984C400947474 /* FullSyncer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullSyncer.m; sourceTree = "<group>"; };
+		FE8530431CE984C400947474 /* HttpSyncer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpSyncer.h; sourceTree = "<group>"; };
+		FE8530441CE984C400947474 /* HttpSyncer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpSyncer.m; sourceTree = "<group>"; };
+		FE8530451CE984C400947474 /* MediaSyncer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaSyncer.h; sourceTree = "<group>"; };
+		FE8530461CE984C400947474 /* MediaSyncer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaSyncer.m; sourceTree = "<group>"; };
+		FE8530471CE984C400947474 /* RemoteMediaServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemoteMediaServer.h; sourceTree = "<group>"; };
+		FE8530481CE984C400947474 /* RemoteMediaServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemoteMediaServer.m; sourceTree = "<group>"; };
+		FE8530491CE984C400947474 /* RemoteServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemoteServer.h; sourceTree = "<group>"; };
+		FE85304A1CE984C400947474 /* RemoteServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemoteServer.m; sourceTree = "<group>"; };
+		FE85304B1CE984C400947474 /* Syncer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Syncer.h; sourceTree = "<group>"; };
+		FE85304C1CE984C400947474 /* Syncer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Syncer.m; sourceTree = "<group>"; };
+		FE85304D1CE984C400947474 /* Tags.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tags.h; sourceTree = "<group>"; };
+		FE85304E1CE984C400947474 /* Tags.log */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Tags.log; sourceTree = "<group>"; };
+		FE85304F1CE984C400947474 /* Tags.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tags.m; sourceTree = "<group>"; };
+		FE8530511CE984C400947474 /* Template.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Template.h; sourceTree = "<group>"; };
+		FE8530521CE984C400947474 /* Template.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Template.m; sourceTree = "<group>"; };
+		FE8530531CE984C400947474 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		FE8530541CE984C400947474 /* Utils.log */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Utils.log; sourceTree = "<group>"; };
+		FE8530551CE984C400947474 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
+		FE8530561CE984C400947474 /* XCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCollection.h; sourceTree = "<group>"; };
+		FE8530571CE984C400947474 /* XCollection.log */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = XCollection.log; sourceTree = "<group>"; };
+		FE8530581CE984C400947474 /* XCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCollection.m; sourceTree = "<group>"; };
+		FE85305A1CE984C400947474 /* Context.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Context.h; sourceTree = "<group>"; };
+		FE85305B1CE984C400947474 /* Context.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Context.m; sourceTree = "<group>"; };
+		FE85305C1CE984C400947474 /* NSMutableDictionary+hanzi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+hanzi.h"; sourceTree = "<group>"; };
+		FE85305D1CE984C400947474 /* NSMutableDictionary+hanzi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+hanzi.m"; sourceTree = "<group>"; };
+		FE85305F1CE984C400947474 /* AnkiDatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnkiDatabaseManager.h; sourceTree = "<group>"; };
+		FE8530601CE984C400947474 /* AnkiDatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnkiDatabaseManager.m; sourceTree = "<group>"; };
+		FE8530611CE984C400947474 /* AnkiDb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnkiDb.h; sourceTree = "<group>"; };
+		FE8530621CE984C400947474 /* AnkiDb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnkiDb.m; sourceTree = "<group>"; };
+		FE8530631CE984C400947474 /* AnkiDroidApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnkiDroidApp.h; sourceTree = "<group>"; };
+		FE8530641CE984C400947474 /* AnkiDroidApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnkiDroidApp.m; sourceTree = "<group>"; };
+		FE8530661CE984C400947474 /* AnkiExporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnkiExporter.h; sourceTree = "<group>"; };
+		FE8530671CE984C400947474 /* AnkiExporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnkiExporter.m; sourceTree = "<group>"; };
+		FE8530681CE984C400947474 /* AnkiPackageExporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnkiPackageExporter.h; sourceTree = "<group>"; };
+		FE8530691CE984C400947474 /* AnkiPackageExporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnkiPackageExporter.m; sourceTree = "<group>"; };
+		FE85306A1CE984C400947474 /* Exporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exporter.h; sourceTree = "<group>"; };
+		FE85306B1CE984C400947474 /* Exporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Exporter.m; sourceTree = "<group>"; };
+		FE85306C1CE984C400947474 /* ZipFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipFile.h; sourceTree = "<group>"; };
+		FE85306D1CE984C400947474 /* ZipFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZipFile.m; sourceTree = "<group>"; };
+		FE85306E1CE984C400947474 /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64.h; sourceTree = "<group>"; };
+		FE85306F1CE984C400947474 /* Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64.m; sourceTree = "<group>"; };
+		FE8530701CE984C400947474 /* BitmapUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BitmapUtil.h; sourceTree = "<group>"; };
+		FE8530711CE984C400947474 /* BitmapUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BitmapUtil.m; sourceTree = "<group>"; };
+		FE8530721CE984C400947474 /* ConvUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConvUtils.h; sourceTree = "<group>"; };
+		FE8530731CE984C400947474 /* ConvUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConvUtils.m; sourceTree = "<group>"; };
+		FE8530741CE984C400947474 /* DiffEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiffEngine.h; sourceTree = "<group>"; };
+		FE8530751CE984C400947474 /* DiffEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiffEngine.m; sourceTree = "<group>"; };
+		FE8530761CE984C400947474 /* ExifUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExifUtil.h; sourceTree = "<group>"; };
+		FE8530771CE984C400947474 /* ExifUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExifUtil.m; sourceTree = "<group>"; };
+		FE8530781CE984C400947474 /* HtmlUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HtmlUtil.h; sourceTree = "<group>"; };
+		FE8530791CE984C400947474 /* HtmlUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HtmlUtil.m; sourceTree = "<group>"; };
+		FE85307A1CE984C400947474 /* HttpUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpUtility.h; sourceTree = "<group>"; };
+		FE85307B1CE984C400947474 /* HttpUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpUtility.m; sourceTree = "<group>"; };
+		FE85307C1CE984C400947474 /* LanguageUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LanguageUtil.h; sourceTree = "<group>"; };
+		FE85307D1CE984C400947474 /* LanguageUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LanguageUtil.m; sourceTree = "<group>"; };
+		FE85307E1CE984C400947474 /* MethodLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MethodLogger.h; sourceTree = "<group>"; };
+		FE85307F1CE984C400947474 /* MethodLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MethodLogger.m; sourceTree = "<group>"; };
+		FE8530801CE984C400947474 /* Threads.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Threads.h; sourceTree = "<group>"; };
+		FE8530811CE984C400947474 /* Threads.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Threads.m; sourceTree = "<group>"; };
+		FE8530821CE984C400947474 /* UIUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIUtils.h; sourceTree = "<group>"; };
+		FE8530831CE984C400947474 /* UIUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIUtils.m; sourceTree = "<group>"; };
+		FE8530841CE984C400947474 /* VersionUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VersionUtils.h; sourceTree = "<group>"; };
+		FE8530851CE984C400947474 /* VersionUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VersionUtils.m; sourceTree = "<group>"; };
+		FE8530CD1CE98B2000947474 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		FE8530CE1CE98B2000947474 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		FE8530CF1CE98B2000947474 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		FE8530D01CE98B2000947474 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		FE8530D11CE98B2000947474 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		FE8530D21CE98B2000947474 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		FE8530D31CE98B2000947474 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		FE8530D41CE98B2000947474 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		FE8530D51CE98B2000947474 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		FE8530D61CE98B2000947474 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		FE8530D71CE98B2000947474 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		FE8530D81CE98B2000947474 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE8530DF1CE9926B00947474 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		FE8530E11CE9935300947474 /* c09.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = c09.db; path = Hanzi_1.1/c09.db; sourceTree = "<group>"; };
+		FE8530E31CE9ABCB00947474 /* Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timer.h; sourceTree = "<group>"; };
+		FE8530E41CE9ABCB00947474 /* Timer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Timer.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FE852FC81CE9838C00947474 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE8530E01CE9926C00947474 /* libsqlite3.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE852FE11CE9838C00947474 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE852FEC1CE9838C00947474 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FE852FC21CE9838C00947474 = {
+			isa = PBXGroup;
+			children = (
+				FE8530E11CE9935300947474 /* c09.db */,
+				FE8530DF1CE9926B00947474 /* libsqlite3.tbd */,
+				FE852FCD1CE9838C00947474 /* Hanzi_1.1 */,
+				FE852FE71CE9838C00947474 /* Hanzi_1.1Tests */,
+				FE852FF21CE9838C00947474 /* Hanzi_1.1UITests */,
+				FE852FCC1CE9838C00947474 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FE852FCC1CE9838C00947474 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FE852FCB1CE9838C00947474 /* Hanzi_1.1.app */,
+				FE852FE41CE9838C00947474 /* Hanzi_1.1Tests.xctest */,
+				FE852FEF1CE9838C00947474 /* Hanzi_1.1UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FE852FCD1CE9838C00947474 /* Hanzi_1.1 */ = {
+			isa = PBXGroup;
+			children = (
+				FE8530CC1CE98B2000947474 /* fmdb */,
+				FE8530011CE984C400947474 /* class */,
+				FE852FD11CE9838C00947474 /* AppDelegate.h */,
+				FE852FD21CE9838C00947474 /* AppDelegate.m */,
+				FE852FD41CE9838C00947474 /* ViewController.h */,
+				FE852FD51CE9838C00947474 /* ViewController.m */,
+				FE852FD71CE9838C00947474 /* Main.storyboard */,
+				FE852FDA1CE9838C00947474 /* Assets.xcassets */,
+				FE852FDC1CE9838C00947474 /* LaunchScreen.storyboard */,
+				FE852FDF1CE9838C00947474 /* Info.plist */,
+				FE852FCE1CE9838C00947474 /* Supporting Files */,
+			);
+			path = Hanzi_1.1;
+			sourceTree = "<group>";
+		};
+		FE852FCE1CE9838C00947474 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FE852FCF1CE9838C00947474 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FE852FE71CE9838C00947474 /* Hanzi_1.1Tests */ = {
+			isa = PBXGroup;
+			children = (
+				FE852FE81CE9838C00947474 /* Hanzi_1_1Tests.m */,
+				FE852FEA1CE9838C00947474 /* Info.plist */,
+			);
+			path = Hanzi_1.1Tests;
+			sourceTree = "<group>";
+		};
+		FE852FF21CE9838C00947474 /* Hanzi_1.1UITests */ = {
+			isa = PBXGroup;
+			children = (
+				FE852FF31CE9838C00947474 /* Hanzi_1_1UITests.m */,
+				FE852FF51CE9838C00947474 /* Info.plist */,
+			);
+			path = Hanzi_1.1UITests;
+			sourceTree = "<group>";
+		};
+		FE8530011CE984C400947474 /* class */ = {
+			isa = PBXGroup;
+			children = (
+				FE8530021CE984C400947474 /* ichi2_libanki */,
+				FE8530591CE984C400947474 /* ichi2_tools */,
+				FE85305E1CE984C400947474 /* ichi2_utils */,
+			);
+			path = class;
+			sourceTree = "<group>";
+		};
+		FE8530021CE984C400947474 /* ichi2_libanki */ = {
+			isa = PBXGroup;
+			children = (
+				FE8530031CE984C400947474 /* Card.h */,
+				FE8530061CE984C400947474 /* CardStats.h */,
+				FE8530091CE984C400947474 /* Consts.h */,
+				FE85300C1CE984C400947474 /* Decks.h */,
+				FE85300F1CE984C400947474 /* Finder.h */,
+				FE8530281CE984C400947474 /* LaTeX.h */,
+				FE85302B1CE984C400947474 /* Media.h */,
+				FE85302E1CE984C400947474 /* Models.h */,
+				FE8530311CE984C400947474 /* Note.h */,
+				FE8530341CE984C400947474 /* Sched.h */,
+				FE8530371CE984C400947474 /* Sound.h */,
+				FE85303A1CE984C400947474 /* Stats.h */,
+				FE85303D1CE984C400947474 /* Storage.h */,
+				FE85304D1CE984C400947474 /* Tags.h */,
+				FE8530531CE984C400947474 /* Utils.h */,
+				FE8530561CE984C400947474 /* XCollection.h */,
+				FE8530041CE984C400947474 /* Card.log */,
+				FE8530071CE984C400947474 /* CardStats.log */,
+				FE85300A1CE984C400947474 /* Consts.log */,
+				FE85300D1CE984C400947474 /* Decks.log */,
+				FE8530101CE984C400947474 /* Finder.log */,
+				FE8530291CE984C400947474 /* LaTeX.log */,
+				FE85302C1CE984C400947474 /* Media.log */,
+				FE85302F1CE984C400947474 /* Models.log */,
+				FE8530321CE984C400947474 /* Note.log */,
+				FE8530351CE984C400947474 /* Sched.log */,
+				FE8530381CE984C400947474 /* Sound.log */,
+				FE85303B1CE984C400947474 /* Stats.log */,
+				FE85303E1CE984C400947474 /* Storage.log */,
+				FE85304E1CE984C400947474 /* Tags.log */,
+				FE8530541CE984C400947474 /* Utils.log */,
+				FE8530571CE984C400947474 /* XCollection.log */,
+				FE8530051CE984C400947474 /* Card.m */,
+				FE8530081CE984C400947474 /* CardStats.m */,
+				FE85300B1CE984C400947474 /* Consts.m */,
+				FE85300E1CE984C400947474 /* Decks.m */,
+				FE8530111CE984C400947474 /* Finder.m */,
+				FE85302A1CE984C400947474 /* LaTeX.m */,
+				FE85302D1CE984C400947474 /* Media.m */,
+				FE8530301CE984C400947474 /* Models.m */,
+				FE8530331CE984C400947474 /* Note.m */,
+				FE8530361CE984C400947474 /* Sched.m */,
+				FE8530391CE984C400947474 /* Sound.m */,
+				FE85303C1CE984C400947474 /* Stats.m */,
+				FE85303F1CE984C400947474 /* Storage.m */,
+				FE85304F1CE984C400947474 /* Tags.m */,
+				FE8530551CE984C400947474 /* Utils.m */,
+				FE8530581CE984C400947474 /* XCollection.m */,
+				FE8530121CE984C400947474 /* hooks */,
+				FE8530251CE984C400947474 /* importer */,
+				FE8530401CE984C400947474 /* sync */,
+				FE8530501CE984C400947474 /* template */,
+			);
+			path = ichi2_libanki;
+			sourceTree = "<group>";
+		};
+		FE8530121CE984C400947474 /* hooks */ = {
+			isa = PBXGroup;
+			children = (
+				FE8530131CE984C400947474 /* ChessFilter.h */,
+				FE8530141CE984C400947474 /* ChessFilter.m */,
+				FE8530151CE984C400947474 /* ExternalHookLoader.h */,
+				FE8530161CE984C400947474 /* ExternalHookLoader.m */,
+				FE8530171CE984C400947474 /* FuriganaFilters.h */,
+				FE8530181CE984C400947474 /* FuriganaFilters.m */,
+				FE8530191CE984C400947474 /* HebrewFixFilter.h */,
+				FE85301A1CE984C400947474 /* HebrewFixFilter.m */,
+				FE85301B1CE984C400947474 /* HintFilter.h */,
+				FE85301C1CE984C400947474 /* HintFilter.m */,
+				FE85301D1CE984C400947474 /* Hook.h */,
+				FE85301E1CE984C400947474 /* Hook.m */,
+				FE85301F1CE984C400947474 /* HookPlugin.h */,
+				FE8530201CE984C400947474 /* HookPlugin.m */,
+				FE8530211CE984C400947474 /* Hooks.h */,
+				FE8530221CE984C400947474 /* Hooks.m */,
+				FE8530231CE984C400947474 /* Leech.h */,
+				FE8530241CE984C400947474 /* Leech.m */,
+			);
+			path = hooks;
+			sourceTree = "<group>";
+		};
+		FE8530251CE984C400947474 /* importer */ = {
+			isa = PBXGroup;
+			children = (
+				FE8530261CE984C400947474 /* Anki2Importer.h */,
+				FE8530271CE984C400947474 /* Anki2Importer.m */,
+			);
+			path = importer;
+			sourceTree = "<group>";
+		};
+		FE8530401CE984C400947474 /* sync */ = {
+			isa = PBXGroup;
+			children = (
+				FE8530411CE984C400947474 /* FullSyncer.h */,
+				FE8530421CE984C400947474 /* FullSyncer.m */,
+				FE8530431CE984C400947474 /* HttpSyncer.h */,
+				FE8530441CE984C400947474 /* HttpSyncer.m */,
+				FE8530451CE984C400947474 /* MediaSyncer.h */,
+				FE8530461CE984C400947474 /* MediaSyncer.m */,
+				FE8530471CE984C400947474 /* RemoteMediaServer.h */,
+				FE8530481CE984C400947474 /* RemoteMediaServer.m */,
+				FE8530491CE984C400947474 /* RemoteServer.h */,
+				FE85304A1CE984C400947474 /* RemoteServer.m */,
+				FE85304B1CE984C400947474 /* Syncer.h */,
+				FE85304C1CE984C400947474 /* Syncer.m */,
+			);
+			path = sync;
+			sourceTree = "<group>";
+		};
+		FE8530501CE984C400947474 /* template */ = {
+			isa = PBXGroup;
+			children = (
+				FE8530511CE984C400947474 /* Template.h */,
+				FE8530521CE984C400947474 /* Template.m */,
+			);
+			path = template;
+			sourceTree = "<group>";
+		};
+		FE8530591CE984C400947474 /* ichi2_tools */ = {
+			isa = PBXGroup;
+			children = (
+				FE85305A1CE984C400947474 /* Context.h */,
+				FE85305B1CE984C400947474 /* Context.m */,
+				FE85305C1CE984C400947474 /* NSMutableDictionary+hanzi.h */,
+				FE85305D1CE984C400947474 /* NSMutableDictionary+hanzi.m */,
+				FE8530E31CE9ABCB00947474 /* Timer.h */,
+				FE8530E41CE9ABCB00947474 /* Timer.m */,
+			);
+			path = ichi2_tools;
+			sourceTree = "<group>";
+		};
+		FE85305E1CE984C400947474 /* ichi2_utils */ = {
+			isa = PBXGroup;
+			children = (
+				FE85305F1CE984C400947474 /* AnkiDatabaseManager.h */,
+				FE8530611CE984C400947474 /* AnkiDb.h */,
+				FE8530631CE984C400947474 /* AnkiDroidApp.h */,
+				FE85306E1CE984C400947474 /* Base64.h */,
+				FE8530701CE984C400947474 /* BitmapUtil.h */,
+				FE8530721CE984C400947474 /* ConvUtils.h */,
+				FE8530741CE984C400947474 /* DiffEngine.h */,
+				FE8530761CE984C400947474 /* ExifUtil.h */,
+				FE8530781CE984C400947474 /* HtmlUtil.h */,
+				FE85307A1CE984C400947474 /* HttpUtility.h */,
+				FE85307C1CE984C400947474 /* LanguageUtil.h */,
+				FE85307E1CE984C400947474 /* MethodLogger.h */,
+				FE8530801CE984C400947474 /* Threads.h */,
+				FE8530821CE984C400947474 /* UIUtils.h */,
+				FE8530841CE984C400947474 /* VersionUtils.h */,
+				FE8530601CE984C400947474 /* AnkiDatabaseManager.m */,
+				FE8530621CE984C400947474 /* AnkiDb.m */,
+				FE8530641CE984C400947474 /* AnkiDroidApp.m */,
+				FE85306F1CE984C400947474 /* Base64.m */,
+				FE8530711CE984C400947474 /* BitmapUtil.m */,
+				FE8530731CE984C400947474 /* ConvUtils.m */,
+				FE8530751CE984C400947474 /* DiffEngine.m */,
+				FE8530771CE984C400947474 /* ExifUtil.m */,
+				FE8530791CE984C400947474 /* HtmlUtil.m */,
+				FE85307B1CE984C400947474 /* HttpUtility.m */,
+				FE85307D1CE984C400947474 /* LanguageUtil.m */,
+				FE85307F1CE984C400947474 /* MethodLogger.m */,
+				FE8530811CE984C400947474 /* Threads.m */,
+				FE8530831CE984C400947474 /* UIUtils.m */,
+				FE8530851CE984C400947474 /* VersionUtils.m */,
+				FE8530651CE984C400947474 /* AnkiPackageExporter */,
+			);
+			path = ichi2_utils;
+			sourceTree = "<group>";
+		};
+		FE8530651CE984C400947474 /* AnkiPackageExporter */ = {
+			isa = PBXGroup;
+			children = (
+				FE8530661CE984C400947474 /* AnkiExporter.h */,
+				FE8530671CE984C400947474 /* AnkiExporter.m */,
+				FE8530681CE984C400947474 /* AnkiPackageExporter.h */,
+				FE8530691CE984C400947474 /* AnkiPackageExporter.m */,
+				FE85306A1CE984C400947474 /* Exporter.h */,
+				FE85306B1CE984C400947474 /* Exporter.m */,
+				FE85306C1CE984C400947474 /* ZipFile.h */,
+				FE85306D1CE984C400947474 /* ZipFile.m */,
+			);
+			path = AnkiPackageExporter;
+			sourceTree = "<group>";
+		};
+		FE8530CC1CE98B2000947474 /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				FE8530CD1CE98B2000947474 /* FMDatabase.h */,
+				FE8530CE1CE98B2000947474 /* FMDatabase.m */,
+				FE8530CF1CE98B2000947474 /* FMDatabaseAdditions.h */,
+				FE8530D01CE98B2000947474 /* FMDatabaseAdditions.m */,
+				FE8530D11CE98B2000947474 /* FMDatabasePool.h */,
+				FE8530D21CE98B2000947474 /* FMDatabasePool.m */,
+				FE8530D31CE98B2000947474 /* FMDatabaseQueue.h */,
+				FE8530D41CE98B2000947474 /* FMDatabaseQueue.m */,
+				FE8530D51CE98B2000947474 /* FMDB.h */,
+				FE8530D61CE98B2000947474 /* FMResultSet.h */,
+				FE8530D71CE98B2000947474 /* FMResultSet.m */,
+				FE8530D81CE98B2000947474 /* Info.plist */,
+			);
+			path = fmdb;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FE852FCA1CE9838C00947474 /* Hanzi_1.1 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE852FF81CE9838C00947474 /* Build configuration list for PBXNativeTarget "Hanzi_1.1" */;
+			buildPhases = (
+				FE852FC71CE9838C00947474 /* Sources */,
+				FE852FC81CE9838C00947474 /* Frameworks */,
+				FE852FC91CE9838C00947474 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Hanzi_1.1;
+			productName = Hanzi_1.1;
+			productReference = FE852FCB1CE9838C00947474 /* Hanzi_1.1.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FE852FE31CE9838C00947474 /* Hanzi_1.1Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE852FFB1CE9838C00947474 /* Build configuration list for PBXNativeTarget "Hanzi_1.1Tests" */;
+			buildPhases = (
+				FE852FE01CE9838C00947474 /* Sources */,
+				FE852FE11CE9838C00947474 /* Frameworks */,
+				FE852FE21CE9838C00947474 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FE852FE61CE9838C00947474 /* PBXTargetDependency */,
+			);
+			name = Hanzi_1.1Tests;
+			productName = Hanzi_1.1Tests;
+			productReference = FE852FE41CE9838C00947474 /* Hanzi_1.1Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FE852FEE1CE9838C00947474 /* Hanzi_1.1UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE852FFE1CE9838C00947474 /* Build configuration list for PBXNativeTarget "Hanzi_1.1UITests" */;
+			buildPhases = (
+				FE852FEB1CE9838C00947474 /* Sources */,
+				FE852FEC1CE9838C00947474 /* Frameworks */,
+				FE852FED1CE9838C00947474 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FE852FF11CE9838C00947474 /* PBXTargetDependency */,
+			);
+			name = Hanzi_1.1UITests;
+			productName = Hanzi_1.1UITests;
+			productReference = FE852FEF1CE9838C00947474 /* Hanzi_1.1UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FE852FC31CE9838C00947474 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = com.chaojiyiji;
+				TargetAttributes = {
+					FE852FCA1CE9838C00947474 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					FE852FE31CE9838C00947474 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = FE852FCA1CE9838C00947474;
+					};
+					FE852FEE1CE9838C00947474 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = FE852FCA1CE9838C00947474;
+					};
+				};
+			};
+			buildConfigurationList = FE852FC61CE9838C00947474 /* Build configuration list for PBXProject "Hanzi_1.1" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FE852FC21CE9838C00947474;
+			productRefGroup = FE852FCC1CE9838C00947474 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FE852FCA1CE9838C00947474 /* Hanzi_1.1 */,
+				FE852FE31CE9838C00947474 /* Hanzi_1.1Tests */,
+				FE852FEE1CE9838C00947474 /* Hanzi_1.1UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FE852FC91CE9838C00947474 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE8530A81CE984C400947474 /* Storage.log in Resources */,
+				FE85309A1CE984C400947474 /* LaTeX.log in Resources */,
+				FE8530B51CE984C400947474 /* XCollection.log in Resources */,
+				FE8530B01CE984C400947474 /* Tags.log in Resources */,
+				FE852FDE1CE9838C00947474 /* LaunchScreen.storyboard in Resources */,
+				FE8530B31CE984C400947474 /* Utils.log in Resources */,
+				FE8530A01CE984C400947474 /* Note.log in Resources */,
+				FE852FDB1CE9838C00947474 /* Assets.xcassets in Resources */,
+				FE8530DE1CE98B2000947474 /* Info.plist in Resources */,
+				FE85308E1CE984C400947474 /* Finder.log in Resources */,
+				FE8530861CE984C400947474 /* Card.log in Resources */,
+				FE8530A41CE984C400947474 /* Sound.log in Resources */,
+				FE85309C1CE984C400947474 /* Media.log in Resources */,
+				FE85309E1CE984C400947474 /* Models.log in Resources */,
+				FE8530881CE984C400947474 /* CardStats.log in Resources */,
+				FE85308A1CE984C400947474 /* Consts.log in Resources */,
+				FE8530A21CE984C400947474 /* Sched.log in Resources */,
+				FE85308C1CE984C400947474 /* Decks.log in Resources */,
+				FE852FD91CE9838C00947474 /* Main.storyboard in Resources */,
+				FE8530E21CE9935300947474 /* c09.db in Resources */,
+				FE8530A61CE984C400947474 /* Stats.log in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE852FE21CE9838C00947474 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE852FED1CE9838C00947474 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FE852FC71CE9838C00947474 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE8530941CE984C400947474 /* HintFilter.m in Sources */,
+				FE85309B1CE984C400947474 /* LaTeX.m in Sources */,
+				FE8530911CE984C400947474 /* ExternalHookLoader.m in Sources */,
+				FE8530AE1CE984C400947474 /* RemoteServer.m in Sources */,
+				FE8530AD1CE984C400947474 /* RemoteMediaServer.m in Sources */,
+				FE8530B11CE984C400947474 /* Tags.m in Sources */,
+				FE8530E51CE9ABCB00947474 /* Timer.m in Sources */,
+				FE8530A51CE984C400947474 /* Sound.m in Sources */,
+				FE8530BC1CE984C400947474 /* AnkiExporter.m in Sources */,
+				FE8530C71CE984C400947474 /* LanguageUtil.m in Sources */,
+				FE8530C01CE984C400947474 /* Base64.m in Sources */,
+				FE8530BD1CE984C400947474 /* AnkiPackageExporter.m in Sources */,
+				FE8530CA1CE984C400947474 /* UIUtils.m in Sources */,
+				FE8530891CE984C400947474 /* CardStats.m in Sources */,
+				FE8530A91CE984C400947474 /* Storage.m in Sources */,
+				FE8530CB1CE984C400947474 /* VersionUtils.m in Sources */,
+				FE852FD61CE9838C00947474 /* ViewController.m in Sources */,
+				FE8530B81CE984C400947474 /* NSMutableDictionary+hanzi.m in Sources */,
+				FE8530961CE984C400947474 /* HookPlugin.m in Sources */,
+				FE8530BF1CE984C400947474 /* ZipFile.m in Sources */,
+				FE85309D1CE984C400947474 /* Media.m in Sources */,
+				FE852FD31CE9838C00947474 /* AppDelegate.m in Sources */,
+				FE8530971CE984C400947474 /* Hooks.m in Sources */,
+				FE85308F1CE984C400947474 /* Finder.m in Sources */,
+				FE8530951CE984C400947474 /* Hook.m in Sources */,
+				FE8530991CE984C400947474 /* Anki2Importer.m in Sources */,
+				FE85308D1CE984C400947474 /* Decks.m in Sources */,
+				FE8530C51CE984C400947474 /* HtmlUtil.m in Sources */,
+				FE8530BB1CE984C400947474 /* AnkiDroidApp.m in Sources */,
+				FE8530AB1CE984C400947474 /* HttpSyncer.m in Sources */,
+				FE8530AA1CE984C400947474 /* FullSyncer.m in Sources */,
+				FE8530931CE984C400947474 /* HebrewFixFilter.m in Sources */,
+				FE8530B71CE984C400947474 /* Context.m in Sources */,
+				FE8530A71CE984C400947474 /* Stats.m in Sources */,
+				FE8530AC1CE984C400947474 /* MediaSyncer.m in Sources */,
+				FE85308B1CE984C400947474 /* Consts.m in Sources */,
+				FE8530B61CE984C400947474 /* XCollection.m in Sources */,
+				FE8530AF1CE984C400947474 /* Syncer.m in Sources */,
+				FE8530DC1CE98B2000947474 /* FMDatabaseQueue.m in Sources */,
+				FE8530DB1CE98B2000947474 /* FMDatabasePool.m in Sources */,
+				FE8530D91CE98B2000947474 /* FMDatabase.m in Sources */,
+				FE8530BA1CE984C400947474 /* AnkiDb.m in Sources */,
+				FE8530921CE984C400947474 /* FuriganaFilters.m in Sources */,
+				FE8530DD1CE98B2000947474 /* FMResultSet.m in Sources */,
+				FE8530C41CE984C400947474 /* ExifUtil.m in Sources */,
+				FE8530A31CE984C400947474 /* Sched.m in Sources */,
+				FE85309F1CE984C400947474 /* Models.m in Sources */,
+				FE8530901CE984C400947474 /* ChessFilter.m in Sources */,
+				FE8530C61CE984C400947474 /* HttpUtility.m in Sources */,
+				FE852FD01CE9838C00947474 /* main.m in Sources */,
+				FE8530981CE984C400947474 /* Leech.m in Sources */,
+				FE8530871CE984C400947474 /* Card.m in Sources */,
+				FE8530C91CE984C400947474 /* Threads.m in Sources */,
+				FE8530C11CE984C400947474 /* BitmapUtil.m in Sources */,
+				FE8530A11CE984C400947474 /* Note.m in Sources */,
+				FE8530DA1CE98B2000947474 /* FMDatabaseAdditions.m in Sources */,
+				FE8530B91CE984C400947474 /* AnkiDatabaseManager.m in Sources */,
+				FE8530C81CE984C400947474 /* MethodLogger.m in Sources */,
+				FE8530B41CE984C400947474 /* Utils.m in Sources */,
+				FE8530C21CE984C400947474 /* ConvUtils.m in Sources */,
+				FE8530BE1CE984C400947474 /* Exporter.m in Sources */,
+				FE8530C31CE984C400947474 /* DiffEngine.m in Sources */,
+				FE8530B21CE984C400947474 /* Template.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE852FE01CE9838C00947474 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE852FE91CE9838C00947474 /* Hanzi_1_1Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE852FEB1CE9838C00947474 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE852FF41CE9838C00947474 /* Hanzi_1_1UITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FE852FE61CE9838C00947474 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FE852FCA1CE9838C00947474 /* Hanzi_1.1 */;
+			targetProxy = FE852FE51CE9838C00947474 /* PBXContainerItemProxy */;
+		};
+		FE852FF11CE9838C00947474 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FE852FCA1CE9838C00947474 /* Hanzi_1.1 */;
+			targetProxy = FE852FF01CE9838C00947474 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FE852FD71CE9838C00947474 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FE852FD81CE9838C00947474 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FE852FDC1CE9838C00947474 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FE852FDD1CE9838C00947474 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FE852FF61CE9838C00947474 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FE852FF71CE9838C00947474 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FE852FF91CE9838C00947474 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Hanzi_1.1/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chaojiyiji.hanzi.Hanzi-1-1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FE852FFA1CE9838C00947474 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Hanzi_1.1/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chaojiyiji.hanzi.Hanzi-1-1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		FE852FFC1CE9838C00947474 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = Hanzi_1.1Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chaojiyiji.hanzi.Hanzi-1-1Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hanzi_1.1.app/Hanzi_1.1";
+			};
+			name = Debug;
+		};
+		FE852FFD1CE9838C00947474 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = Hanzi_1.1Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chaojiyiji.hanzi.Hanzi-1-1Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hanzi_1.1.app/Hanzi_1.1";
+			};
+			name = Release;
+		};
+		FE852FFF1CE9838C00947474 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Hanzi_1.1UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chaojiyiji.hanzi.Hanzi-1-1UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Hanzi_1.1;
+			};
+			name = Debug;
+		};
+		FE8530001CE9838C00947474 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Hanzi_1.1UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chaojiyiji.hanzi.Hanzi-1-1UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Hanzi_1.1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FE852FC61CE9838C00947474 /* Build configuration list for PBXProject "Hanzi_1.1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE852FF61CE9838C00947474 /* Debug */,
+				FE852FF71CE9838C00947474 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FE852FF81CE9838C00947474 /* Build configuration list for PBXNativeTarget "Hanzi_1.1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE852FF91CE9838C00947474 /* Debug */,
+				FE852FFA1CE9838C00947474 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FE852FFB1CE9838C00947474 /* Build configuration list for PBXNativeTarget "Hanzi_1.1Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE852FFC1CE9838C00947474 /* Debug */,
+				FE852FFD1CE9838C00947474 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FE852FFE1CE9838C00947474 /* Build configuration list for PBXNativeTarget "Hanzi_1.1UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE852FFF1CE9838C00947474 /* Debug */,
+				FE8530001CE9838C00947474 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FE852FC31CE9838C00947474 /* Project object */;
+}
