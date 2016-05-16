@@ -13,9 +13,14 @@
 
 
 
+
 //    private Collection mCol;
 /**注释*/
 @property (nonatomic, strong) XCollection *mCol;
+
+//    private long mId;
+/**注释*/
+@property (nonatomic, assign) NSInteger mId;
 
 //    private String mGuId;
 /**注释*/

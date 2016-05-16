@@ -9,6 +9,7 @@
 #import "Tags.h"
 #import "Sched.h"
 #import "AnkiDb.h"
+#import "Utils.h"
 
 
 @implementation Note
@@ -28,8 +29,8 @@
 - (instancetype)initWithcol:(XCollection *)col xid:(NSInteger)xid
 {
 //        this(col, null, id);
-
-	return nil;
+    
+	return [self initWithcol:col model:nil xid:xid];
 }
 //
 //
@@ -38,7 +39,7 @@
 {
 //        this(col, model, null);
 
-	return nil;
+	return [self initWithcol:col model:model xid:nil];
 }
 //
 //
@@ -73,8 +74,41 @@
 //            mFMap = mCol.getModels().fieldMap(mModel);
 //            mScm = mCol.getScm();
 //        }
-
-	return nil;
+    
+    //-----
+    //assert !(model != null && id != null);
+    if (self = [super init]) {
+        _mCol = col;
+        
+        if (xid != nil) {
+            _mId = xid;
+            [self load];
+        } else {
+            _mId = [Utils timestampIDWithdb:[self.mCol getDb] table:@"notes"];
+            _mGuId = [Utils guid64];
+            _mModel = model;
+            
+            _mMid = [model objectForKey:@"id"];
+            _mTags = [NSMutableArray array];
+            _mFields = [NSMutableArray array];
+            
+//          TTT  _mFields fill, "";
+            
+            _mFlags = 0;
+            _mData = @"";
+            /** "Mapping of field name -> (ord, field).
+             *  比如： 字段有“正面”和“背面”，正面是第一个字段，背面是第二个字段；
+             *  则返回的map集合的第一个元素就是下面的样式：
+             *  { “正面” {0， {name:“正面”， sticky:false, rtl:false, ord:0, font:"Arial", size:20}}}
+             *  { “背面” {1， {name:“背面”， sticky:false, rtl:false, ord:1, font:"Arial", size:20}}}
+             * */
+            _mFMap = [[self.mCol getModels] fieldMapWithm:self.mModel];
+            _mScm = [self.mCol getScm];
+            
+        }
+    }
+    
+    return self;
 }
 //
 //    // 从数据库的表中读取数据并加载；
@@ -103,9 +137,40 @@
 //            if (cursor != null) {
 //                cursor.close();
 //            }
-//        }
+//        }-------------------
+    
+//    FMResultSet *cursor = nil;
+//    cursor = [[_mDb getDatabase] executeQuery:@"SELECT crt, mod, scm, dty, usn, ls, conf, models, decks, dconf, tags FROM col"];
+//    if (![cursor next]) {
+//        return;
+//    }
+//    _mCrt = [cursor longForColumnIndex:0];
+//    _mMod = [cursor longForColumnIndex:1];
+    
+    
+            FMResultSet *cursor = nil;
+    NSString *sql = [NSString stringWithFormat:@"SELECT guid, mid, mod, usn, tags, flds, flags, data FROM notes WHERE id = %d", self.mId];
+    cursor = [[[self.mCol getDb] getDatabase] executeQuery:sql];
+    
+    
+    if (![cursor next]) {
+        NSLog(@"Notes.load(): No result from query for note ");
+    }
+    
+    _mGuId = [cursor stringForColumnIndex:0];
+    _mMid = [cursor longForColumnIndex:1];
+    _mMod = [cursor longForColumnIndex:2];
+    _mUsn = [cursor intForColumnIndex:3];
+    _mTags = [[self.mCol getTags] splitWithtags:[cursor stringForColumnIndex:4]];
+    _mFields = [Utils splitFieldsWithfields:[cursor stringForColumnIndex:5]];
+    _mFlags = [cursor stringForColumnIndex:6];
+    _mData = [cursor stringForColumnIndex:7];
+    _mModel = [[self.mCol getModels] getWithxid:self.mMid];
+    _mFMap = [[self.mCol getModels] fieldMapWithm:self.mModel];
+    _mScm = [self.mCol getScm];
+    
+    
 
-//	return nil;
 }
 //
 //
@@ -118,7 +183,7 @@
 {
 //    	flush(null);
 
-//	return nil;
+    [self flushWithmod:nil];
 }
 //
 //    public void flush(Long mod) {
@@ -126,7 +191,7 @@
 {
 //        flush(mod, true);
 
-//	return nil;
+    [self flushWithmod:mod changeUsn:YES];
 }
 //
 //    public void flush(Long mod, boolean changeUsn) {
@@ -162,7 +227,7 @@
 {
 //        return Utils.joinFields(mFields);
 
-	return nil;
+	return [Utils joinFieldsWithlist:self.mFields];
 }
 //
 //
@@ -184,8 +249,33 @@
 //            }
 //        }
 //        return cards;
+    
+    //--------
+    NSMutableArray *card= [NSMutableArray array];
+    FMResultSet *cur = nil;
+    
+    NSString *sql = [NSString stringWithFormat:@"SELECT id FROM cards WHERE nid = %d ORDER BY ord", self.mId];
+    
+    
+    
+//            ArrayList<Card> cards = new ArrayList<Card>();
+//            Cursor cur = null;
+//            try {
+//                cur = mCol.getDb().getDatabase()
+//                        .rawQuery("SELECT id FROM cards WHERE nid = " + mId + " ORDER BY ord", null);
+//                while (cur.moveToNext()) {
+//                    cards.add(mCol.getCard(cur.getLong(0)));
+//                }
+//            } finally {
+//                if (cur != null) {
+//                    cur.close();
+//                }
+//            }
+//            return cards;
+    return nil;
+    
+    //----------
 
-	return nil;
 }
 //
 //    // 返回这条笔记用到的笔记类型，它记载着当前笔记的类型，例如，“填空”，“基础”，“选择”，
