@@ -11,7 +11,7 @@
 @interface Test01ViewController : ViewController
 
 
-- (NSMutableArray<type> *)test:(Class *)type query:(NSString *)query column:(NSInteger)column;
+//- (NSMutableArray<type> *)test:(Class *)type query:(NSString *)query column:(NSInteger)column;
 
 
 @end

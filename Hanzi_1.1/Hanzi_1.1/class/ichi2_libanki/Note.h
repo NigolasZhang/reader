@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 @class XCollection;
 
-@interface Note : NSObject
+@interface Note : NSObject<NSCopying>
 
 
 
@@ -198,9 +198,12 @@
 /**方法注释*/
 - (NSInteger)getMod;
 
+
+
 //    public Note clone() {
 /**方法注释*/
-- (Note *)copy;
+- (id)copyWithZone:(nullable NSZone *)zone;
+
 
 //    public List<String> getTags() {
 /**方法注释这个方法有泛型，注意啦！*/

@@ -555,14 +555,15 @@
 //    private void _preFlush() {
 - (void)_preFlush
 {
-//        // “select 1 from mytable”这句话意思是，任意选择一个，用来判断能否搜索出结果；结合语境的意思是
 //        // 当前的笔记，有没有生成过卡片，我们已经将该笔记加入并生成卡片了吗？
 //        mNewlyAdded = mCol.getDb().queryScalar("SELECT 1 FROM cards WHERE nid = " + mId) == 0;
-
-//	return nil;
+            // 当前的笔记，有没有生成过卡片，我们已经将该笔记加入并生成卡片了吗？
+    NSString *sql = [NSString stringWithFormat:@"SELECT 1 FROM cards WHERE nid = %ld", self.mId];
+    NSInteger n = [[self.mCol getDb] queryScalarWithquery:sql];
+    self.mNewlyAdded = n == 0;
+    
 }
-//
-//
+
 //    /*
 //     * generate missing cards
 //     * 之前笔记可能没有卡片没生成，现在补全生成；
@@ -575,8 +576,15 @@
 //            // 这是什么语法，就是生成一个long类型的数组，数组中有一个元素，即mId,
 //            mCol.genCards(new long[] { mId });
 //        }
-
-//	return nil;
+            // 当前笔记已经的卡片已经生成了吗？如果没有，我们就去生成卡片，
+            if (!self.mNewlyAdded) {
+                // 这是什么语法，就是生成一个long类型的数组，数组中有一个元素，即mId,
+                NSMutableArray *arr = [NSMutableArray array];
+                [arr addObject:[NSNumber numberWithInt:self.mId]];
+                
+                [self.mCol genCardsWithnids:arr];
+            }
+ 
 }
 //
 //    /*
@@ -591,7 +599,7 @@
 {
 //        return mMid;
 
-	return nil;
+	return self.mMid;
 }
 //
 //
@@ -605,7 +613,7 @@
 //        // TODO: Conflicting method name and return value. Reconsider.
 //        return mId;
 
-	return nil;
+	return self.mId;
 }
 //
 //
@@ -615,7 +623,7 @@
 {
 //        return mCol;
 
-	return nil;
+	return self.mCol;
 }
 //
 //
@@ -625,7 +633,8 @@
 {
 //        return mCol.getDb().queryString("SELECT sfld FROM notes WHERE id = " + mId);
 
-	return nil;
+    NSString *sql = [NSString stringWithFormat:@"SELECT sfld FROM notes WHERE id = %ld", self.mId];
+	return [[self.mCol getDb] queryStringWithquery:sql];
 }
 //
 //
@@ -635,7 +644,7 @@
 {
 //        return mFields;
 
-	return nil;
+	return self.mFields;
 }
 //
 //
@@ -645,7 +654,7 @@
 {
 //        mFields[index] = value;
 
-//	return nil;
+    self.mFields[index] = value;
 }
 //
 //    //获取最后修改时间；
@@ -654,10 +663,20 @@
 {
 //        return mMod;
 
-	return nil;
+	return self.mMod;
 }
 
 //copy这个方法找不到，您自己匹配吧！
+- (id)copyWithZone:(nullable NSZone *)zone{
+    //1. 创建一个新对象；
+    Note *n = [[[self class] allocWithZone:zone] init];
+    //2. 设置当前对象内容到新对象；
+    
+    //3. 返回新的对象；
+    return n;
+}
+
+
 //
 //
 //    // 返回mtags；
@@ -666,7 +685,7 @@
 {
 //        return mTags;
 
-	return nil;
+	return self.mTags;
 }
 
 
