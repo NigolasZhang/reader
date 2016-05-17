@@ -71,7 +71,7 @@
 
 //    public <T> ArrayList<T> queryColumn(Class<T> type, String query, int column) {
 /**方法注释这个方法有<T>注意啦*/
-- (NSMutableArray *)queryColumnWithtype:(NSObject *)type query:(NSString *)query column:(NSInteger)column;
+- (NSMutableArray *)queryColumnWithtype:(NSString *)type query:(NSString *)query column:(NSInteger)column;
 
 //    private static String getCursorMethodName(String typeName) {
 /**方法注释*/

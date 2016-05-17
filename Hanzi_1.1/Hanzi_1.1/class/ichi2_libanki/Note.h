@@ -112,7 +112,7 @@
 
 //    public String[] keys() {
 /**方法注释*/
-- (NSMutableArray *)keys;
+- (NSArray *)keys;
 
 //    public String[] values() {
 /**方法注释*/
