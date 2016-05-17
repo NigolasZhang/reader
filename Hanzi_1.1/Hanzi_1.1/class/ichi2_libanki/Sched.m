@@ -2364,7 +2364,7 @@
 //            // 如果配置文件中的lastUnburied这个属性值小于mToday，则取消搁置；
 //            unburyCards();
 //        }
-    NSInteger unburied = [[self.mCol getConf] setOrGetObject:[NSNumber numberWithInt:@0] forKey:@"lastUnburied"];
+    NSInteger unburied = [[self.mCol getConf] setOrGetObject:[NSNumber numberWithInt:0] forKey:@"lastUnburied"];
     if (unburied < self.mToday) {
         [self unburyCards];
     }
