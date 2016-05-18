@@ -7,6 +7,7 @@
 //
 
 #import "AnkiDb.h"
+#import "FMDB.h"
 
 @implementation AnkiDb
 
@@ -220,7 +221,7 @@
 //     * @return An ArrayList with the contents of the specified column.
 //     */
 //    public <T> ArrayList<T> queryColumn(Class<T> type, String query, int column) {
-- (NSMutableArray *)queryColumnWithtype:(NSObject *)type query:(NSString *)query column:(NSInteger)column
+- (NSMutableArray *)queryColumnWithtype:(NSString *)type query:(NSString *)query column:(NSInteger)column
 {
     //        int nullExceptionCount = 0;
     //        InvocationTargetException nullException = null; // to catch the null exception for reporting
@@ -247,10 +248,21 @@
     //                        throw new RuntimeException(e);
     //                    }
     //                }
+//---
+    NSMutableArray *results = [NSMutableArray array];
+    FMResultSet *cursor = nil;
     
-    return nil;
+    cursor = [self.mDatabase executeQuery:query];
     
-}
+    SEL sel = NSSelectorFromString([NSString stringWithFormat:@"%@ForColumnIndex:", type]);
+    
+    while ([cursor next]) {
+       id e = [cursor performSelector:sel withObject:[NSNumber numberWithInt:column]];
+        [results addObject:e];
+        
+    }
+    return results;
+ }
 //
 //
 //    /**

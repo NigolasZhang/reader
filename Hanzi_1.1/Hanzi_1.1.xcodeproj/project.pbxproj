@@ -95,6 +95,9 @@
 		FE8530DE1CE98B2000947474 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FE8530D81CE98B2000947474 /* Info.plist */; };
 		FE8530E01CE9926C00947474 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FE8530DF1CE9926B00947474 /* libsqlite3.tbd */; };
 		FE8530E51CE9ABCB00947474 /* Timer.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8530E41CE9ABCB00947474 /* Timer.m */; };
+		FE91D8371CEAEB5300630416 /* Test01ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE91D8361CEAEB5300630416 /* Test01ViewController.m */; };
+		FEB32D161CEA8E7000AD7B48 /* Pair.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB32D151CEA8E7000AD7B48 /* Pair.m */; };
+		FEB32D191CEABDF200AD7B48 /* NSString+hanzi.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB32D181CEABDF200AD7B48 /* NSString+hanzi.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -273,6 +276,12 @@
 		FE8530DF1CE9926B00947474 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		FE8530E31CE9ABCB00947474 /* Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timer.h; sourceTree = "<group>"; };
 		FE8530E41CE9ABCB00947474 /* Timer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Timer.m; sourceTree = "<group>"; };
+		FE91D8351CEAEB5300630416 /* Test01ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test01ViewController.h; sourceTree = "<group>"; };
+		FE91D8361CEAEB5300630416 /* Test01ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test01ViewController.m; sourceTree = "<group>"; };
+		FEB32D141CEA8E7000AD7B48 /* Pair.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pair.h; sourceTree = "<group>"; };
+		FEB32D151CEA8E7000AD7B48 /* Pair.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pair.m; sourceTree = "<group>"; };
+		FEB32D171CEABDF200AD7B48 /* NSString+hanzi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+hanzi.h"; sourceTree = "<group>"; };
+		FEB32D181CEABDF200AD7B48 /* NSString+hanzi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+hanzi.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -338,6 +347,8 @@
 				FE852FDA1CE9838C00947474 /* Assets.xcassets */,
 				FE852FDC1CE9838C00947474 /* LaunchScreen.storyboard */,
 				FE852FDF1CE9838C00947474 /* Info.plist */,
+				FE91D8351CEAEB5300630416 /* Test01ViewController.h */,
+				FE91D8361CEAEB5300630416 /* Test01ViewController.m */,
 				FE852FCE1CE9838C00947474 /* Supporting Files */,
 			);
 			path = Hanzi_1.1;
@@ -509,6 +520,10 @@
 				FE85305D1CE984C400947474 /* NSMutableDictionary+hanzi.m */,
 				FE8530E31CE9ABCB00947474 /* Timer.h */,
 				FE8530E41CE9ABCB00947474 /* Timer.m */,
+				FEB32D141CEA8E7000AD7B48 /* Pair.h */,
+				FEB32D151CEA8E7000AD7B48 /* Pair.m */,
+				FEB32D171CEABDF200AD7B48 /* NSString+hanzi.h */,
+				FEB32D181CEABDF200AD7B48 /* NSString+hanzi.m */,
 			);
 			path = ichi2_tools;
 			sourceTree = "<group>";
@@ -778,6 +793,7 @@
 				FE8530921CE984C400947474 /* FuriganaFilters.m in Sources */,
 				FE8530DD1CE98B2000947474 /* FMResultSet.m in Sources */,
 				FE8530C41CE984C400947474 /* ExifUtil.m in Sources */,
+				FEB32D161CEA8E7000AD7B48 /* Pair.m in Sources */,
 				FE8530A31CE984C400947474 /* Sched.m in Sources */,
 				FE85309F1CE984C400947474 /* Models.m in Sources */,
 				FE8530901CE984C400947474 /* ChessFilter.m in Sources */,
@@ -794,9 +810,11 @@
 				FE8530C81CE984C400947474 /* MethodLogger.m in Sources */,
 				FE8530B41CE984C400947474 /* Utils.m in Sources */,
 				FE8530C21CE984C400947474 /* ConvUtils.m in Sources */,
+				FEB32D191CEABDF200AD7B48 /* NSString+hanzi.m in Sources */,
 				FE8530BE1CE984C400947474 /* Exporter.m in Sources */,
 				FE8530C31CE984C400947474 /* DiffEngine.m in Sources */,
 				FE8530B21CE984C400947474 /* Template.m in Sources */,
+				FE91D8371CEAEB5300630416 /* Test01ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,6 +10,8 @@
 #import "Sched.h"
 #import "AnkiDb.h"
 #import "Utils.h"
+#import "Pair.h"
+#import "NSString+hanzi.h"
 
 
 @implementation Note
@@ -39,7 +41,7 @@
 {
 //        this(col, model, null);
 
-	return [self initWithcol:col model:model xid:nil];
+	return [self initWithcol:col model:model xid: nil];
 }
 //
 //
@@ -218,6 +220,37 @@
 //        _postFlush();
 
 //	return nil;
+    
+//-----
+    //        assert mScm == mCol.getScm();
+    self.mScm = [self.mCol getScm];
+    [self _preFlush];
+    if (changeUsn) {
+        self.mUsn = [self.mCol usn];
+    }
+    
+    NSInteger i = [[self.mCol getModels] sortIdxWithm:self.mModel];
+    NSString *sfld = [Utils stripHTMLMediaWiths:[self.mFields objectAtIndex:i]];
+    
+    
+    NSString *tags = [self stringTags];
+    NSString *fields = [self joinedFields];
+    
+    NSString *sql = [NSString stringWithFormat:@"select 1 from notes where id = %ld and tags = %@ and flds = %@", (long)self.mId, tags, fields];
+    NSInteger q = [[self.mCol getDb] queryScalarWithquery:sql];
+    if (mod == 0 && q > 0) {
+        return;
+    }
+    
+    long csum = [Utils fieldChecksumWithdata:self.mFields[0]];
+    self.mMod = mod != 0 ? mod : [Utils intNow];
+    
+    
+    NSString *sql1 = [NSString stringWithFormat:@"insert or replace into notes values (%ld,%@,%ld,%ld,%ld,%@,%@,%@,%ld,%ld,%@)", (long)self.mId, self.mGuId, (long)self.mMid, (long)self.mMod, (long)self.mUsn, tags, fields, sfld, csum, (long)self.mFlags, self.mData];
+    [[self.mCol getDb] executeWithsql:sql1];
+    [[self.mCol getTags] registerWithtags:self.mTags];
+    [self _postFlush];
+   
 }
 //
 //
@@ -251,31 +284,16 @@
 //        return cards;
     
     //--------
-    NSMutableArray *card= [NSMutableArray array];
+    NSMutableArray *cards= [NSMutableArray array];
     FMResultSet *cur = nil;
     
-    NSString *sql = [NSString stringWithFormat:@"SELECT id FROM cards WHERE nid = %d ORDER BY ord", self.mId];
+    NSString *sql = [NSString stringWithFormat:@"SELECT id FROM cards WHERE nid = %ld ORDER BY ord", (long)self.mId];
+    cur = [[[self.mCol getDb] getDatabase] executeQuery:sql];
+    while ([cur next]) {
+        [cards addObject:[self.mCol getCardWithxid:[cur longForColumnIndex:0]]];
+    }
+    return cards;
     
-    
-    
-//            ArrayList<Card> cards = new ArrayList<Card>();
-//            Cursor cur = null;
-//            try {
-//                cur = mCol.getDb().getDatabase()
-//                        .rawQuery("SELECT id FROM cards WHERE nid = " + mId + " ORDER BY ord", null);
-//                while (cur.moveToNext()) {
-//                    cards.add(mCol.getCard(cur.getLong(0)));
-//                }
-//            } finally {
-//                if (cur != null) {
-//                    cur.close();
-//                }
-//            }
-//            return cards;
-    return nil;
-    
-    //----------
-
 }
 //
 //    // 返回这条笔记用到的笔记类型，它记载着当前笔记的类型，例如，“填空”，“基础”，“选择”，
@@ -286,21 +304,16 @@
 {
 //        return mModel;
 
-	return nil;
+	return self.mModel;
 }
 //
-//
-//    /**
-//     * Dict interface
-//     * ***********************************************************
-//     */
 //    // 将字段的元数据名字，拿出来拼成数组keys
 //    public String[] keys() {
-- (NSMutableArray *)keys
+- (NSArray *)keys
 {
 //        return (String[])mFMap.keySet().toArray();
 
-	return nil;
+	return [self.mFMap allKeys];
 }
 //
 //    // 将字段的具体值，拿出来拼成一个数组；
@@ -309,7 +322,7 @@
 {
 //        return mFields;
 
-	return nil;
+	return self.mFields;
 }
 //
 //    /**返回一个二维数组，如下所示：
@@ -331,8 +344,37 @@
 //            result[i][1] = mFields[i];
 //        }
 //        return result;
+    
+//    //2.---------------------addObject
+//    //添加元素的方法
+//    [mArray1 addObject:str1];
+//    [mArray1 addObject:str2];
+//    //添加数组，把mArray1中的所有元素全部添加到mArray2中
+//    [mArray2 addObjectsFromArray:mArray1];
+//    NSLog(@"mArray3 = %@",mArray2);
+//    
+//    //二维数组
+//    //这个是将mArray1添加到mArray2数组中，这样mArray2就变成了二维数组了
+//    [mArray2 addObject:mArray1];
+//    
+    //-------
+    NSMutableArray *result = [NSMutableArray array];
+    for (NSString *fname in [self.mFMap allKeys]) {
+        Pair *e = [self.mFMap objectForKey:fname];
+        NSInteger i = e.first;
+        
+        NSString *s0 = fname;
+        NSString *s1 = self.mFields[i];
+        NSArray *arr = [[NSArray alloc] initWithObjects:s0,s1, nil];
+        
+        [result addObject:arr];
+        
+    }
+    
+    return result;
+    
+    //--------
 
-	return nil;
 }
 //
 //    // 给你一个key, 它在字段列表中的索引号是多少？
@@ -342,8 +384,8 @@
 - (NSInteger)_fieldOrdWithkey:(NSString *)key
 {
 //        return mFMap.get(key).first;
-
-	return nil;
+    Pair *e = [self.mFMap objectForKey:key];
+	return e.first;
 }
 //
 //    // 返回字段fields中某个字段的值；
@@ -351,8 +393,9 @@
 - (NSString *)getitemWithkey:(NSString *)key
 {
 //        return mFields[_fieldOrd(key)];
-
-	return nil;
+    NSInteger i = [self _fieldOrdWithkey:key];
+    
+	return self.mFields[i];
 }
 //
 //    // 为fileds字段的某个key赋值；
@@ -360,8 +403,9 @@
 - (void)setitemWithkey:(NSString *)key value:(NSString *)value
 {
 //        mFields[_fieldOrd(key)] = value;
-
-//	return nil;
+    NSInteger i = [self _fieldOrdWithkey:key];
+    [self.mFields replaceObjectAtIndex:i withObject:value];
+   
 }
 //
 //    //当前笔记的字段列表，包含名字叫“key”的字段吗？
@@ -370,7 +414,7 @@
 {
 //    	return mFMap.containsKey(key);
 
-	return nil;
+	return [[self.mFMap allKeys] containsObject:key];
 }
 //
 //
@@ -384,7 +428,7 @@
 {
 //        return mCol.getTags().inList(tag, mTags);
 
-	return nil;
+	return [[self.mCol getTags] inListWithtag:tag tags:self.mTags];
 }
 //
 //    // 将当前note的Tags连接成一个字符串；
@@ -393,7 +437,8 @@
 {
 //        return mCol.getTags().join(mCol.getTags().canonify(mTags));
 
-	return nil;
+    Tags *t = [self.mCol getTags];
+	return [t joinWithtags:[t canonifyWithtagList:self.mTags]];
 }
 //
 //    // 通过字符串来设置标签，从collection中获取tag字段的字符串，然后对其切分，切成数组，赋值给mTags
@@ -402,7 +447,7 @@
 {
 //        mTags = mCol.getTags().split(str);
 
-//	return nil;
+    self.mTags = [[self.mCol getTags] splitWithtags:str];
 }
 //
 //
@@ -421,11 +466,19 @@
 //        for (String r : rem) {
 //            mTags.remove(r);
 //        }
-
-//	return nil;
+//-----
+    NSMutableArray *rem = [NSMutableArray array];
+    // 首先忽略大小写，遍历出现有的所有同名标签，放入一个集合b中，
+    for (NSString *t in self.mTags) {
+        if ([t isEqualToStringIgnoreCase:tag]) {
+            [rem addObject:t];
+        }
+    }
+    // 遍历集合b，删除mTags中b包含的元素；
+    for (NSString *r in rem) {
+        [self.mTags removeObject:r];
+    }
 }
-//
-//
 //    /*
 //     *  duplicates will be stripped on save
 //     *  添加标签，如果重复，将会倍取消，
@@ -435,7 +488,7 @@
 {
 //        mTags.add(tag);
 
-//	return nil;
+    [self.mTags addObject:tag];
 }
 //
 //
@@ -470,8 +523,24 @@
 //            }
 //        }
 //        return null;
-
-	return nil;
+//----
+    NSString *val = self.mFields[0];
+    if ([[val trim] length] == 0) {
+        return 1;
+    }
+    //csum 它是由排序的域生成的哈西值，用来避免重复；
+    NSInteger csum = [Utils fieldChecksumWithdata:val];
+    NSInteger xmid = self.mId != 0 ? self.mId : 0;
+    NSString *sql = [NSString stringWithFormat:@"SELECT flds FROM notes WHERE csum = %ld AND id != %ld AND mid = %ld", (long)csum, (long)xmid, (long)self.mMid];
+    
+    NSMutableArray *r = [[self.mCol getDb] queryColumnWithtype:@"string" query:sql column:0];
+    for (NSString *flds in r) {
+        if ([[Utils stripHTMLMediaWiths:[Utils splitFieldsWithfields:flds][0]] isEqualToString:[Utils stripHTMLMediaWiths:self.mFields[0]]]) {
+            return 2;
+        }
+    }
+    return 0;
+  
 }
 //
 //
@@ -486,14 +555,15 @@
 //    private void _preFlush() {
 - (void)_preFlush
 {
-//        // “select 1 from mytable”这句话意思是，任意选择一个，用来判断能否搜索出结果；结合语境的意思是
 //        // 当前的笔记，有没有生成过卡片，我们已经将该笔记加入并生成卡片了吗？
 //        mNewlyAdded = mCol.getDb().queryScalar("SELECT 1 FROM cards WHERE nid = " + mId) == 0;
-
-//	return nil;
+            // 当前的笔记，有没有生成过卡片，我们已经将该笔记加入并生成卡片了吗？
+    NSString *sql = [NSString stringWithFormat:@"SELECT 1 FROM cards WHERE nid = %ld", self.mId];
+    NSInteger n = [[self.mCol getDb] queryScalarWithquery:sql];
+    self.mNewlyAdded = n == 0;
+    
 }
-//
-//
+
 //    /*
 //     * generate missing cards
 //     * 之前笔记可能没有卡片没生成，现在补全生成；
@@ -506,8 +576,15 @@
 //            // 这是什么语法，就是生成一个long类型的数组，数组中有一个元素，即mId,
 //            mCol.genCards(new long[] { mId });
 //        }
-
-//	return nil;
+            // 当前笔记已经的卡片已经生成了吗？如果没有，我们就去生成卡片，
+            if (!self.mNewlyAdded) {
+                // 这是什么语法，就是生成一个long类型的数组，数组中有一个元素，即mId,
+                NSMutableArray *arr = [NSMutableArray array];
+                [arr addObject:[NSNumber numberWithInt:self.mId]];
+                
+                [self.mCol genCardsWithnids:arr];
+            }
+ 
 }
 //
 //    /*
@@ -522,7 +599,7 @@
 {
 //        return mMid;
 
-	return nil;
+	return self.mMid;
 }
 //
 //
@@ -536,7 +613,7 @@
 //        // TODO: Conflicting method name and return value. Reconsider.
 //        return mId;
 
-	return nil;
+	return self.mId;
 }
 //
 //
@@ -546,7 +623,7 @@
 {
 //        return mCol;
 
-	return nil;
+	return self.mCol;
 }
 //
 //
@@ -556,7 +633,8 @@
 {
 //        return mCol.getDb().queryString("SELECT sfld FROM notes WHERE id = " + mId);
 
-	return nil;
+    NSString *sql = [NSString stringWithFormat:@"SELECT sfld FROM notes WHERE id = %ld", self.mId];
+	return [[self.mCol getDb] queryStringWithquery:sql];
 }
 //
 //
@@ -566,7 +644,7 @@
 {
 //        return mFields;
 
-	return nil;
+	return self.mFields;
 }
 //
 //
@@ -576,7 +654,7 @@
 {
 //        mFields[index] = value;
 
-//	return nil;
+    self.mFields[index] = value;
 }
 //
 //    //获取最后修改时间；
@@ -585,10 +663,20 @@
 {
 //        return mMod;
 
-	return nil;
+	return self.mMod;
 }
 
 //copy这个方法找不到，您自己匹配吧！
+- (id)copyWithZone:(nullable NSZone *)zone{
+    //1. 创建一个新对象；
+    Note *n = [[[self class] allocWithZone:zone] init];
+    //2. 设置当前对象内容到新对象；
+    
+    //3. 返回新的对象；
+    return n;
+}
+
+
 //
 //
 //    // 返回mtags；
@@ -597,7 +685,7 @@
 {
 //        return mTags;
 
-	return nil;
+	return self.mTags;
 }
 
 
